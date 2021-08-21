@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Resultados Pruebas New Experience</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c8ead1d5a1b611256c38e267af9ff3352be71dc63128922675717b68a83fcf8d.html">Realizar Una Compra En New Experience</a></span>
+                > <span class="truncate-60"><a
+                    href="6192dd6114112b7eb125f05733dfd0d00ca40481fe1bd89765781a7795ee42e0.html">Realizar una Compra </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-08-2021 16:42</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Realizar Una Compra En New Experience </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="6440f747a4fac16ef981c5e5efc63bbadcf4319e81889ba9852ebac97ab332ad.html">Realizar Compra
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Realizar una Compra
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="d6b8be96005b4f2e87110c500f89a4353708d1c51a93759476ca091c662d40b0.png" title=" Usuario de New Experience opens the http://automationpractice.com/index.php" width="1370"/>
+                <img src="5b9d763bc52a009e87fe5c16d5c833a40e640e4c46ce7bc2aab92aeb24b46a64.png" title=" Dado un usuario con una cuenta activa e inicia sesi&oacute;n" width="1370"/>
+                <img src="5b9d763bc52a009e87fe5c16d5c833a40e640e4c46ce7bc2aab92aeb24b46a64.png" title=" Usuario de new experience inicio sesion correcto" width="1370"/>
+                <img src="5b9d763bc52a009e87fe5c16d5c833a40e640e4c46ce7bc2aab92aeb24b46a64.png" title=" Usuario de New Experience clicks on Login" width="1370"/>
+                <img src="4d7d1c8493441b5b617c43910409d6de35963f11bc65adda74a6f781be57efd5.png" title=" Usuario de New Experience enters 'alvarezmaria513@gmail.com' into Email" width="1370"/>
+                <img src="8d11c8865b27b47a55289a0fb0851e141377caff8fa3429281ccdb061bf6acc5.png" title=" Usuario de New Experience enters 'Comprar' into Password" width="1370"/>
+                <img src="5dc16c6b3799a59a5c51502bbdb98ca459c6bd7adc570caa5bd98755a21288c0.png" title=" Usuario de New Experience clicks on Iniciar Sesion" width="1370"/>
+                <img src="5dc16c6b3799a59a5c51502bbdb98ca459c6bd7adc570caa5bd98755a21288c0.png" title=" Usuario de new experience inicio sesion correcto (completed)" width="1370"/>
+                <img src="5dc16c6b3799a59a5c51502bbdb98ca459c6bd7adc570caa5bd98755a21288c0.png" title=" Dado un usuario con una cuenta activa e inicia sesi&oacute;n (completed)" width="1370"/>
+                <img src="3d25b33c1bc7a5b9ee9e9db6af9e5b8bee0c488598a40765c45ca519e64ddc0f.png" title=" Cuando agrega 3 productos al carrito y realiza el flujo de compra" width="1370"/>
+                <img src="3d25b33c1bc7a5b9ee9e9db6af9e5b8bee0c488598a40765c45ca519e64ddc0f.png" title=" Usuario de new experience realizar compra" width="1370"/>
+                <img src="3d25b33c1bc7a5b9ee9e9db6af9e5b8bee0c488598a40765c45ca519e64ddc0f.png" title=" Usuario de New Experience clicks on Selecciona Women" width="1370"/>
+                <img src="3d25b33c1bc7a5b9ee9e9db6af9e5b8bee0c488598a40765c45ca519e64ddc0f.png" title=" Usuario de new experience agregar productos" width="1370"/>
+                <img src="3d25b33c1bc7a5b9ee9e9db6af9e5b8bee0c488598a40765c45ca519e64ddc0f.png" title=" Usuario de New Experience clicks on Agregar al carrito" width="1370"/>
+                <img src="6f2185bb86b4e4828ac602401f91cd7c39c64e6563914dc49aab9d2858b99033.png" title=" Usuario de New Experience clicks on Selecciona Continuar" width="1370"/>
+                <img src="c39051f49ec214302ccfac744a773268aca34d4e3f1f92a01add14ff972a6584.png" title=" Usuario de New Experience clicks on Agregar al carrito" width="1370"/>
+                <img src="af02364a12e40d770facf060f68be37556da5aeb5a4b2ba14f8235cb3eae7f86.png" title=" Usuario de New Experience clicks on Selecciona Continuar" width="1370"/>
+                <img src="1893c17b75a17ed260542220be97facb6c13dc684bae1a968addf9344570ac69.png" title=" Usuario de New Experience clicks on Agregar al carrito" width="1370"/>
+                <img src="101e9e18f07db29c83a5e5c396c1bb7c132c28eba696e693e151d0a5e66aff5f.png" title=" Usuario de New Experience clicks on Selecciona Continuar" width="1370"/>
+                <img src="101e9e18f07db29c83a5e5c396c1bb7c132c28eba696e693e151d0a5e66aff5f.png" title=" Usuario de new experience agregar productos (completed)" width="1370"/>
+                <img src="61ffeba7dda498a57c6e4e64518c0856346c6002d1a998b4dacdfaa0958d1c6e.png" title=" Usuario de New Experience clicks on Selecciona Carrito" width="1370"/>
+                <img src="61ffeba7dda498a57c6e4e64518c0856346c6002d1a998b4dacdfaa0958d1c6e.png" title=" Usuario de New Experience clicks on Selecciona Checkout" width="1370"/>
+                <img src="7c26267a032c39a3fb4c3d2cc8ead09127207b74406b3eb0a80e1b21fad4ebdd.png" title=" Usuario de New Experience clicks on Selecciona Proced Checkout" width="1370"/>
+                <img src="7c26267a032c39a3fb4c3d2cc8ead09127207b74406b3eb0a80e1b21fad4ebdd.png" title=" Usuario de New Experience should see Estado Direcci&oacute;n that is displayed" width="1370"/>
+                <img src="a3f57317038521e6f9555ce463042554e21e3a3e1534fabd5f5974c60d225efb.png" title=" Usuario de New Experience clicks on Estado Direcci&oacute;n" width="1370"/>
+                <img src="5ee338082681301aab800013115e910760288c75f8a0c55561f811b481938559.png" title=" Usuario de New Experience clicks on Selecciona Terminos" width="1370"/>
+                <img src="69ec548815e736ac3bf366168d5315035bb3540e63ccd36b6f892e3203403822.png" title=" Usuario de New Experience clicks on Selecciona Terminos" width="1370"/>
+                <img src="07c0c3f94bd87f669bc6199e50bf745d48e4142708e79394ab9ebc5cd5d4eca7.png" title=" Usuario de New Experience clicks on Selecciona Pay by bank" width="1370"/>
+                <img src="56da558664959502ee0b6041258ebe2250f2c4bfdb32b5e6da6e163c1caa6929.png" title=" Usuario de New Experience clicks on Estado Direcci&oacute;n" width="1370"/>
+                <img src="56da558664959502ee0b6041258ebe2250f2c4bfdb32b5e6da6e163c1caa6929.png" title=" Usuario de new experience realizar compra (completed)" width="1370"/>
+                <img src="56da558664959502ee0b6041258ebe2250f2c4bfdb32b5e6da6e163c1caa6929.png" title=" Cuando agrega 3 productos al carrito y realiza el flujo de compra (completed)" width="1370"/>
+                <img src="56da558664959502ee0b6041258ebe2250f2c4bfdb32b5e6da6e163c1caa6929.png" title=" Entonces ver&aacute; su orden completada" width="1370"/>
+                <img src="56da558664959502ee0b6041258ebe2250f2c4bfdb32b5e6da6e163c1caa6929.png" title=" Then validar texto should be 'ORDER CONFIRMATION'" width="1370"/>
+                <img src="56da558664959502ee0b6041258ebe2250f2c4bfdb32b5e6da6e163c1caa6929.png" title=" Entonces ver&aacute; su orden completada (completed): <span class='success-color'>SUCCESS</span>" width="1370"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.12</span>
+</div>
+</body>
+</html>

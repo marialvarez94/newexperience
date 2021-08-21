@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Inicio de sesion en New Experience" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-21T21:45:46" hostname="DESKTOP-3C2UM7Q" time="18.243">
+  <properties/>
+  <testcase name="Iniciar sesión con credenciales incorrectas" classname="Inicio de sesion en New Experience" time="18.243"/>
+  <system-out><![CDATA[Feature from file:///C:/Users/FINSOADMIN/IdeaProjects/newexperience/src/test/resources/features/IniciarSesion.feature
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 9547
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1629582351.170][WARNING]: This version of ChromeDriver has not been tested with Chrome version 92.
+ago 21, 2021 4:45:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+]]></system-err>
+</testsuite>

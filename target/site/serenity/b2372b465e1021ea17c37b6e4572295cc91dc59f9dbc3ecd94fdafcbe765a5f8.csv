@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Crear una cuenta en New Experience","Comprobar la funcionalidad de crear una cuenta con la información personal","SUCCESS","2021-08-21T16:40:36.019-05:00[America/Bogota]","0.0","24.83"
+"Crear una cuenta en New Experience","Comprobar la funcionalidad de crear una cuenta con email valido pero sin llenar los campos requeridos","SUCCESS","2021-08-21T16:41:04.623-05:00[America/Bogota]","0.0","15.01"
+"Crear una cuenta en New Experience","Comprobar la funcionalidad de crear una cuenta con email invalido","SUCCESS","2021-08-21T16:41:21.112-05:00[America/Bogota]","0.0","10.99"

@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Resultados Pruebas New Experience</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="8f545ca1dfca23d4a9b5379982317454ad7b13c06e62f2489ca893f9612028df.html">Crear Una Cuenta En New Experience</a></span>
+                > <span class="truncate-60"><a
+                    href="034f4726877958e3521860b06ef50a422d299dbffffe26927ae0a4ce589e2ba8.html">Comprobar la funcionalidad de crear una cuenta con la informaci&oacute;n personal </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-08-2021 16:40</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Crear Una Cuenta En New Experience </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="8885d25df63da59b8d34c25af81c0e41e924cf72b040d203acc3b78f746b283c.html">Crear Cuenta
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Comprobar la funcionalidad de crear una cuenta con la informaci&oacute;n personal
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f14eb9f31b3edec817e13e87adf45f4bcf0609d96b004c370f24bce088d5be59.png" title=" Usuario de New Experience opens the http://automationpractice.com/index.php" width="1370"/>
+                <img src="f14eb9f31b3edec817e13e87adf45f4bcf0609d96b004c370f24bce088d5be59.png" title=" Dado un usuario que desea crear una cuenta" width="1370"/>
+                <img src="f14eb9f31b3edec817e13e87adf45f4bcf0609d96b004c370f24bce088d5be59.png" title=" Usuario de New Experience opens the http://automationpractice.com/index.php" width="1370"/>
+                <img src="f14eb9f31b3edec817e13e87adf45f4bcf0609d96b004c370f24bce088d5be59.png" title=" Dado un usuario que desea crear una cuenta (completed)" width="1370"/>
+                <img src="5b9d763bc52a009e87fe5c16d5c833a40e640e4c46ce7bc2aab92aeb24b46a64.png" title=" Cuando ingresa su informaci&oacute;n personal" width="1370"/>
+                <img src="5b9d763bc52a009e87fe5c16d5c833a40e640e4c46ce7bc2aab92aeb24b46a64.png" title=" Usuario de new experience crear cuenta en tienda" width="1370"/>
+                <img src="5b9d763bc52a009e87fe5c16d5c833a40e640e4c46ce7bc2aab92aeb24b46a64.png" title=" Usuario de New Experience clicks on Login" width="1370"/>
+                <img src="5b9d763bc52a009e87fe5c16d5c833a40e640e4c46ce7bc2aab92aeb24b46a64.png" title=" Usuario de New Experience should see Crear Cuenta that is displayed" width="1370"/>
+                <img src="2b9f74d3b380632de673d2c74f24a396dd001a0d4482ae4e1fa2d493b125fe2a.png" title=" Usuario de New Experience enters 'choucair@gmail.com' into Ingresar Email" width="1370"/>
+                <img src="28ef46405cffec416e0611ed72e5b86b11804bd5ce6bc7dadca20d8a14004abd.png" title=" Usuario de New Experience clicks on Selecciona Crear Cuenta" width="1370"/>
+                <img src="414e3472e86fad81fd42551346205ab354ee8bf8e287dff44355e515b394afeb.png" title=" Usuario de New Experience enters 'Milena' into  Nombre" width="1370"/>
+                <img src="44c39a090a4ec94c55dfdc6f43e36ed1ba25e5c8c01db678d58d6e217b9b1c74.png" title=" Usuario de New Experience enters 'Andrea' into Apellido" width="1370"/>
+                <img src="7f537496a44b8c4de70de2fd1521513c7fc1cf5d565da0e8c036b59417fed3de.png" title=" Usuario de New Experience enters 'Comprar' into Password" width="1370"/>
+                <img src="c38ff14dd881ed38ec29c9e6b956497d2ccdfa65e613b3b92afad94ab4a4234c.png" title=" Usuario de New Experience enters 'Choucair' into Empresa" width="1370"/>
+                <img src="52fb30720b7e16e386bc48e41c00b221b6946ce6d2aab7b91d053b2b636aeb44.png" title=" Usuario de New Experience enters 'calle 80 # 54' into Direccion" width="1370"/>
+                <img src="94c0766a0e441e2b32f9e0585c5c6eece485f9875d011e90aabb27d1a0774b5c.png" title=" Usuario de New Experience enters 'Barranquilla' into Ciudad" width="1370"/>
+                <img src="3ed5caef40c3def71c0f812346ac62cce0414b7b6b6d3f45c76acd6d9cbc2c5c.png" title=" Usuario de New Experience clicks on Estado" width="1370"/>
+                <img src="2de8fabf4310a4cd749a3752b7ab1659b1467c2d2bb513c297893fc23dcf659f.png" title=" Usuario de New Experience select California on Estado" width="1370"/>
+                <img src="c357bfdc59e9dd0a1b7e8ce527cf186a37a73bf55ea5a15f288d9e805b186a5a.png" title=" Usuario de New Experience enters '00000' into Codigo Postal" width="1370"/>
+                <img src="487eb12fc09c0946a6cc7a65e5e2a1b4957176942bd19b8701f009fe335ea58b.png" title=" Usuario de New Experience enters '3104171898' into Celular" width="1370"/>
+                <img src="53bfce95154c2f1fcbf298a4caaeee9171b62c4864e63a8bfd41f998b47a1eae.png" title=" Usuario de New Experience enters 'Mi direccion calle 80' into Alias Direccion" width="1370"/>
+                <img src="258f0ca26895008ae6b93247d76e6720ede230b874c483ceece7f587ffd33df8.png" title=" Usuario de New Experience clicks on Bo&oacute;n Registrar" width="1370"/>
+                <img src="258f0ca26895008ae6b93247d76e6720ede230b874c483ceece7f587ffd33df8.png" title=" Usuario de new experience crear cuenta en tienda (completed)" width="1370"/>
+                <img src="258f0ca26895008ae6b93247d76e6720ede230b874c483ceece7f587ffd33df8.png" title=" Cuando ingresa su informaci&oacute;n personal (completed)" width="1370"/>
+                <img src="258f0ca26895008ae6b93247d76e6720ede230b874c483ceece7f587ffd33df8.png" title=" Entonces el debera tener acceso a su cuenta" width="1370"/>
+                <img src="258f0ca26895008ae6b93247d76e6720ede230b874c483ceece7f587ffd33df8.png" title=" Then cuenta creada should be (true)" width="1370"/>
+                <img src="258f0ca26895008ae6b93247d76e6720ede230b874c483ceece7f587ffd33df8.png" title=" Entonces el debera tener acceso a su cuenta (completed): <span class='success-color'>SUCCESS</span>" width="1370"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.12</span>
+</div>
+</body>
+</html>
